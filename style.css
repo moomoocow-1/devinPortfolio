@@ -37,7 +37,8 @@ html, body {
     font-size:4rem;
 }
 
-#title span{
+#title span,
+#about-title span{
     display:inline-block;
     transition:transform .2s ease;
 }
@@ -154,13 +155,6 @@ html, body {
 .card-back p{
     margin-top:20px;
     opacity:1;
-}
-
-.section-title{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    margin-bottom:60px;
 }
 
 .section-title{
@@ -396,6 +390,41 @@ html, body {
     animation:dividerBounce 2s ease-in-out infinite;
 }
 
+.area-card{
+
+    max-width:700px;
+    max-height: 100px;
+    padding:40px;
+
+    text-align:center;
+
+    color:white;
+
+    font-family:"Space Grotesk", sans-serif;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:30px;
+
+    box-shadow:
+    0 0 40px rgba(100,150,255,.15);
+}
+
+
+.area-card p + p{
+    margin-top:15px;
+}
+
 @keyframes scrollBounce{
 
     0%,100%{
@@ -416,6 +445,89 @@ html, body {
 
     50%{
         transform:rotate(90deg) translateX(10px);
+    }
+
+}
+
+@media (max-width: 768px){
+
+    #title,
+    #about-title{
+        font-size:2.4rem;
+        text-align:center;
+        line-height:1.2;
+    }
+
+    .hero{
+        padding:0 25px;
+    }
+
+    .section-title{
+        margin-bottom:40px;
+        padding:0 20px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+        gap:30px;
+    }
+
+    .project-card{
+        width:90vw;
+        max-width:340px;
+        height:430px;
+    }
+
+    .tilt{
+        transform:none !important;
+    }
+
+    .about-me{
+        padding:80px 20px;
+    }
+
+    .about-card{
+        width:100%;
+        max-width:500px;
+        padding:30px;
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    .skills{
+        gap:10px;
+    }
+
+    .skill{
+        font-size:.75rem;
+        padding:8px 15px;
+    }
+
+    .contacts{
+        gap:15px;
+        flex-wrap:wrap;
+    }
+
+    .contact{
+        width:55px;
+        height:55px;
+    }
+
+    .contact img{
+        width:28px;
+        height:28px;
+    }
+
+    .area-card{
+        width:100%;
+        max-width:500px;
+        padding:25px;
+    }
+
+    .scroll-indicator,
+    .section-scroll{
+        font-size:.65rem;
     }
 
 }
